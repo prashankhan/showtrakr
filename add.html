@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Show Trackr</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg" href="images/fav.svg">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="Index.html"><i class="fa fa-film"></i> Show<b>Trackr</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Index.html"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="add.html"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="mysec " id="gallery">
+    <div class="container mycont addmargin">
+      <p class="topshow "><i class="fa fa-plus" style="color:#ec2e2e; font-size:20px"></i> Add TV Shows</p>
+      <hr>
+      <form>
+        <div class="form-group">
+          <label for="Name"><b>Name</b></label>
+          <input type="text" class="addcontrol" name="showname" id="addShow" placeholder="Enter TV Show Name">
+        </div>
+        <p id="printtext"></p>
+
+        <button type="button" class="btn btn-primary addbtn" onclick="myFunction()">Add</button>
+      </form>
+    </div>
+
+  </section>
+
+
+  <script>
+    function myFunction() {
+      var val = document.getElementById("addShow");
+      var inputs = /^[A-Z a-z]+$/;
+      var out = val.value;
+      var last = "has been added";
+      var start = "TV Show";
+      var err = "Invalid TV Show Name";
+      if (val.value.match(inputs)) {
+        document.getElementById("printtext").style.color = "#07cc96";
+        document.getElementById("printtext").innerHTML = start + " " + out + " " + last;
+      } else {
+        document.getElementById("printtext").style.color = "#ff5252";
+        document.getElementById("printtext").innerHTML = err;
+      }
+    }
+  </script>
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="row text-center text-xs-center text-sm-left text-md-left">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Our Partners</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="https://www.primevideo.com/" target="_blank"><i class="fa fa-angle-double-right"></i>Amazon</a></li>
+            <li><a href="https://www.netflix.com/lk/" target="_blank"><i class="fa fa-angle-double-right"></i>Netflix</a></li>
+            <li><a href="https://www.hbo.com/" target="_blank"><i class="fa fa-angle-double-right"></i>HBO</a></li>
+            <li><a href="https://www.hotstar.com/in" target="_blank"><i class="fa fa-angle-double-right"></i>Hotstar</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>New Release</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="Arrow.html"><i class="fa fa-angle-double-right"></i>Arrow</a></li>
+            <li><a href="The Flash.html"><i class="fa fa-angle-double-right"></i>The Flash</a></li>
+            <li><a href="Vikings.html"><i class="fa fa-angle-double-right"></i>Vikings</a></li>
+            <li><a href="Titans.html"><i class="fa fa-angle-double-right"></i>Titans</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5>Site Menu</h5>
+          <ul class="list-unstyled quick-links">
+            <li><a href="Index.html"><i class="fa fa-angle-double-right"></i>Home</a></li>
+            <li><a href="add.html"><i class="fa fa-angle-double-right"></i>Add</a></li>
+            <li><a href="login.html"><i class="fa fa-angle-double-right"></i>Login</a></li>
+            <li><a href="signup.html"><i class="fa fa-angle-double-right"></i>Signup</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+          </ul>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p><b><u>Show Trackr</u></b> is web series tracking websites from all famouse streamers </p>
+          <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.facebook.com/CPrashankhan/" target="_blank">Prashankhan</a></p>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </section>
+  <!-- ./Footer -->
+
+</body>
+
+</html>
